@@ -1,18 +1,33 @@
+'use client'
+import Image from 'next/image';
 import styles from './page.module.scss';
+import Lenis from 'lenis';
+import { useEffect, useRef } from 'react';
 
 export default function Home() {
-  const images = [
+  useEffect(() => {
+    
+  }, [])
+  const sections = [
     {
-      src: '/images/risky-ming-fhkheQ_dzCI-unsplash.svg',
+      img: '/images/risky-ming-Ijk7YSk8Bbo-unsplash.svg',
+      title: '',
+      para: '',
     },
     {
-      src: '/images/risky-ming-Ijk7YSk8Bbo-unsplash.svg',
+      img: '/images/risky-ming-LcPb4iLccU4-unsplash.svg',
+      title: 'Duis aute irure dolor',
+      para: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
-      src: '/images/risky-ming-LcPb4iLccU4-unsplash.svg',
+      img: '/images/risky-ming-fhkheQ_dzCI-unsplash.svg',
+      title: 'Excepteur sint occaec',
+      para: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     },
     {
-      src: '/images/risky-ming-S4J87spxkVU-unsplash 1.svg',
+      img: '/images/risky-ming-S4J87spxkVU-unsplash 1.svg',
+      title: '',
+      para: '',
     },
   ];
   return (
@@ -22,21 +37,42 @@ export default function Home() {
           Scroll down for the animation, this is just a sample hero.
         </h1>
       </section>
-      <section className={styles.spotlight}></section>
+      <section className={styles.spotlight}>
+        {sections.map((section, i) => (
+          <div key={i} className={styles.row}>
+              {section.title.length > 0 && 
+            <div className={styles.col}>
+            <div className={styles.textContainer}>
+              <h2>{section.title}</h2>
+              <p>{section.para}</p>
+              </div>
+            </div>
+              }
+            <div className={styles.col}>
+            <div className={styles.imageContainer}>
+              <Image
+                src={section.img}
+                alt={`image ${i}`}
+                fill
+                className={styles.image}
+              />
+            </div>
+            </div>
+          </div>
+        ))}
+      <SvgPath />
+      </section>
       <section className={styles.footer}>
         <h1></h1>
       </section>
-      <SvgPath />
     </main>
   );
 }
 
 const SvgPath = () => {
   return (
-    <div className="w-screen flex items-center justify-center">
+    <div className={styles.svgContainer}>
       <svg
-        width="1274"
-        height="2764"
         viewBox="0 0 1274 2764"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

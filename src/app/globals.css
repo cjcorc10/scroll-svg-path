@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=BBH+Hegarty&display=swap');
 @import 'tailwindcss';
 
-:root {
-  --base-100: #f7acb2;
-  --base-200: #f1ecd3;
-  --base-300: #0f0f0f;
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 2rem;
 }
 
-main {
-  background-color: var(--base-100);
-  font-family: 'BBH Hegarty', sans-serif;
-  color: var(--base-200);
+h2 {
+  font-size: 2rem;
+  line-height: 1; 
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1;
 }
