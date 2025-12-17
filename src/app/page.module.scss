@@ -2,6 +2,7 @@
   --base-100: #f7acb2;
   --base-200: #f1ecd3;
   --base-300: #f76b76;
+  --path-color: #E15B40;
 }
 
 .main {
@@ -16,6 +17,7 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    background-color: var(--path-color);
   }
 
   .spotlight {
@@ -24,13 +26,13 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 0 2rem;
     gap: 10rem;
     overflow: hidden;
     align-items: center;
     .row {
       z-index: 1;
-      height: 100vh;
+      // height: 80vh;
       width: 100%;
       display: flex;
       gap: 2rem;
@@ -45,7 +47,7 @@
         justify-content: center;
         align-items: center;
         .textContainer {
-          width: 50%;
+          width: min(60vw, 25rem);
           background-color: var(--base-300);
           border-radius: 1rem;
           padding: 1.5rem;
@@ -57,31 +59,40 @@
         .imageContainer {
           position: relative;
           width: 100%;
-          height: 100%;
+          height: 40vh;
           .image {
             object-fit: contain;
           }
         }
       }
       &:nth-child(1) .imageContainer {
-        height: 60vh;
-        width: 80%;
+        height: min(50vh, 30rem);
+        width: 100%;
       }
       &:nth-child(4) .imageContainer {
-        height: 80vh;
-        width: 70%;
+        height: min(80vh, 30rem);
+        width: 100%;
       }
     }
     .svgContainer {
-      height: 100%;
-      width: 100%;
+      height: 120%;
+      width: 150%;
       position: absolute;
-      top: 25vh;
+      top: -20vh;
     }
   }
 }
-// @media (max-width: 1000px) {
-//   .row {
-//     flex-direction: column;
-//   }
-// }
+@media (max-width: 1000px) {
+  .spotlight {
+
+    .row {
+      flex-direction: column;
+      
+      &:nth-child(odd) {
+      flex-direction: column;
+
+      }
+    }
+    
+  }
+}

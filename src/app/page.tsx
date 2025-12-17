@@ -42,7 +42,7 @@ export default function Home() {
         ease: 'none',
         scrollTrigger: {
           trigger: ref.current,
-          start: 'top top',
+          start: 'top center',
           end: 'bottom bottom',
           scrub: true,
         },
@@ -120,9 +120,10 @@ const SvgPath = ({
   return (
     <div className={styles.svgContainer}>
       <svg
+        className='h-full w-full object-contain'
         viewBox="0 0 1274 2764"
         fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio='none'
       >
         <path
           ref={ref}
