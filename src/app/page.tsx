@@ -53,7 +53,7 @@ export default function Home() {
 
   const sections = [
     {
-      img: '/images/risky-ming-Ijk7YSk8Bbo-unsplash.svg',
+      img: '/images/risky-ming-Ijk7YSk8Bbo-unsplash(1).svg',
       title: '',
       para: '',
     },
