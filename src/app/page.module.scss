@@ -2,7 +2,7 @@
   --base-100: #f7acb2;
   --base-200: #f1ecd3;
   --base-300: #f76b76;
-  --path-color: #E15B40;
+  --path-color: #e15b40;
 }
 
 .main {
@@ -27,12 +27,11 @@
     display: flex;
     flex-direction: column;
     padding: 0 2rem;
-    gap: 10rem;
+    gap: 15rem;
     overflow: hidden;
     align-items: center;
     .row {
       z-index: 1;
-      // height: 80vh;
       width: 100%;
       display: flex;
       gap: 2rem;
@@ -40,6 +39,7 @@
         flex-direction: row-reverse;
       }
       .col {
+        border: solid white 2px;
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -47,27 +47,27 @@
         justify-content: center;
         align-items: center;
         .textContainer {
-          width: min(60vw, 25rem);
+          width: min(60vw, 30rem);
           background-color: var(--base-300);
           border-radius: 1rem;
-          padding: 1.5rem;
+          padding: 2rem;
           display: flex;
           flex-direction: column;
           gap: 1.5rem;
         }
 
         .imageContainer {
-          border: 3px solid white;
           position: relative;
           width: 100%;
-          height: min(50vw, 30rem);
+          height: min(60vw, 35rem);
           .image {
             object-fit: contain;
           }
         }
       }
       &:nth-child(1) .imageContainer {
-        height: min(50vw, 30rem);
+        margin-top: 5rem;
+        height: min(50vw, 35rem);
         width: 100%;
       }
       &:nth-child(4) .imageContainer {
@@ -85,15 +85,11 @@
 }
 @media (max-width: 1000px) {
   .spotlight {
-
     .row {
       flex-direction: column;
-      
       &:nth-child(odd) {
-      flex-direction: column;
-
+        flex-direction: column;
       }
     }
-    
   }
 }
