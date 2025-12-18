@@ -39,7 +39,6 @@
         flex-direction: row-reverse;
       }
       .col {
-        border: solid white 2px;
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -79,7 +78,7 @@
       height: 120%;
       width: 150%;
       position: absolute;
-      top: -20vh;
+      top: -40vh;
     }
   }
 }
@@ -88,7 +87,7 @@
     .row {
       flex-direction: column;
       &:nth-child(odd) {
-        flex-direction: column;
+        flex-direction: column !important;
       }
     }
   }
